@@ -1,0 +1,184 @@
+
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #FFDDC1;
+    padding: 10px;
+}
+
+/* Estilos para la barra de navegación */
+nav {
+    background-color: #D1F2A5;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    /* Elimina los puntos de la lista */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    /* Dispone los elementos en una fila */
+    justify-content: center;
+    /* Centra los elementos */
+}
+
+nav ul li {
+    margin: 0 15px;
+    /* Espaciado entre los elementos */
+}
+
+nav ul li a {
+    text-decoration: none;
+    /* Elimina el subrayado */
+    color: #000;
+    /* Color del texto */
+    font-weight: bold;
+    /* Pone en negrita los enlaces */
+    font-size: 18px;
+}
+
+/* Hover effect para los enlaces */
+nav ul li a:hover {
+    color: #FF6347;
+    /* Cambia el color al pasar el ratón */
+}
+
+main {
+    background-color: #C2C2F0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+section {
+    background-color: #FFB6C1;
+    width: 45%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+article {
+    background-color: #FFD700;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+aside {
+    background-color: #90EE90;
+    width: 45%;
+    padding: 10px;
+}
+
+footer {
+    background-color: #ADD8E6;
+    padding: 10px;
+    width: 100%;
+    /* Asegura que el footer ocupe todo el ancho disponible */
+    text-align: center;
+    /* Centra el texto del footer */
+    box-sizing: border-box;
+    /* Incluye el padding en el ancho total */
+    margin-top: 20px;
+    /* Añade un margen superior para separar un poco del contenido */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    background-color: #FF6347;
+}
+
+p {
+    background-color: #E6E6FA;
+}
+
+ul,
+ol {
+    background-color: #FFF0F5;
+    padding-left: 20px;
+}
+
+li {
+    background-color: #98FB98;
+    margin: 5px 0;
+}
+
+figure {
+    background-color: #FFFAF0;
+    padding: 10px;
+}
+
+figcaption {
+    background-color: #F0E68C;
+    padding: 5px;
+}
+
+/* Formulario */
+form {
+    background-color: #DCDCDC;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    /* Limita el ancho del formulario */
+    margin: 0 auto;
+    /* Centra el formulario horizontalmente */
+    box-sizing: border-box;
+    /* Asegura que el padding no afecte el ancho total */
+}
+
+input,
+textarea,
+select {
+    background-color: #FFF;
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    /* Hace que los campos del formulario ocupen el 100% del ancho del contenedor */
+    box-sizing: border-box;
+    /* Asegura que el padding no afecte el ancho total */
+}
+
+input[type="submit"] {
+    background-color: #FF6347;
+    /* Color para el botón de submit */
+    color: #FFF;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #FF4500;
+    /* Efecto hover para el botón */
+}
+
+/* Responsive para pantallas más pequeñas */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        /* Los elementos se apilan en pantallas pequeñas */
+        padding: 10px;
+    }
+
+    section,
+    aside {
+        width: 100%;
+        /* Las secciones y aside ocupan todo el ancho disponible en pantallas pequeñas */
+    }
+
+    form {
+        width: 100%;
+        /* El formulario también ocupa el 100% del ancho en pantallas pequeñas */
+        padding: 10px;
+        /* Reduce el padding en pantallas pequeñas */
+    }
+}
