@@ -1,13 +1,140 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejemplo de HTML5 con barra de navegación horizontal</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <title>Ejemplo de HTML5 con footer fijo</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS -->
+    <style>
+        /* Estilo general */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* Asegura que el padding y el borde no afecten el ancho */
+        }
 
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding-bottom: 50px; /* Espacio para el footer */
+            min-height: 100vh; /* Asegura que el contenido ocupe al menos toda la altura de la ventana */
+            display: flex;
+            flex-direction: column; /* Para alinear el contenido y footer verticalmente */
+        }
+
+        header {
+            background-color: #FFDDC1;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Barra de navegación */
+        nav {
+            background-color: #D1F2A5;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        nav ul li a:hover {
+            color: #FF6347;
+        }
+
+        /* Main content */
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px;
+            max-width: 1200px; /* Limita el ancho máximo */
+            margin: 0 auto; /* Centra el contenido */
+            flex-grow: 1; /* Hace que el main ocupe el espacio disponible */
+        }
+
+        section, aside {
+            background-color: #FFB6C1;
+            width: 48%; /* Flexibilidad para ajustarse */
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #ADD8E6;
+            text-align: center;
+            padding: 15px;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            box-sizing: border-box;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            background-color: #FF6347;
+        }
+
+        p {
+            background-color: #E6E6FA;
+        }
+
+        /* Formulario */
+        form {
+            background-color: #DCDCDC;
+            padding: 20px;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+
+        input, textarea, select {
+            background-color: #FFF;
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+        }
+
+        input[type="submit"] {
+            background-color: #FF6347;
+            color: #FFF;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #FF4500;
+        }
+
+        /* Responsive para pantallas más pequeñas */
+        @media (max-width: 768px) {
+            main {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            section, aside {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
 <body>
     <header>
         <h1>Encabezado Principal</h1>
@@ -25,8 +152,7 @@
     <main>
         <section>
             <h2>Sección Principal</h2>
-            <p>Este es un párrafo dentro de una sección. Los elementos como <code>section</code> se pueden usar para
-                dividir el contenido.</p>
+            <p>Este es un párrafo dentro de una sección. Los elementos como <code>section</code> se pueden usar para dividir el contenido.</p>
         </section>
 
         <aside>
@@ -37,11 +163,6 @@
         <section>
             <h2>Otra Sección</h2>
             <p>Esta es otra sección. Puedes tener múltiples secciones en un documento HTML5.</p>
-            <article>
-                <h3>Artículo en la Sección</h3>
-                <p>Este es un artículo dentro de una sección. Los artículos son generalmente partes de contenido
-                    independientes.</p>
-            </article>
         </section>
 
         <section>
@@ -49,13 +170,13 @@
             <form action="#">
                 <label for="name">Nombre:</label>
                 <input type="text" id="name" name="name" required>
-
+                
                 <label for="email">Correo electrónico:</label>
                 <input type="email" id="email" name="email" required>
-
+                
                 <label for="message">Mensaje:</label>
                 <textarea id="message" name="message" rows="4" required></textarea>
-
+                
                 <input type="submit" value="Enviar">
             </form>
         </section>
@@ -66,5 +187,4 @@
     </footer>
 
 </body>
-
 </html>
